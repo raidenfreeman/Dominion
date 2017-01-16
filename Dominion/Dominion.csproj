@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>c178cc0b-ab54-495f-81da-4d659bf712ec</ProjectGuid>
+    <ProjectGuid>{C178CC0B-AB54-495F-81DA-4D659BF712EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dominion</RootNamespace>
@@ -30,25 +30,67 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Interfaces\ICard.cs" />
+    <Compile Include="Cards\Curses\CurseCard.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Chapel.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Moat.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Village.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Chancellor.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Woodcutter.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Workshop.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Bureaucrat.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Feast.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Witch.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Adventurer.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Laboratory.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Smithy.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Mine.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Council Room.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Spy.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Thief.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Throne Room.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Library.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Market.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Remodel.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Moneylender.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Festival.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Militia.cs" />
+    <Compile Include="Cards\Kingdom\Actions\Cellar.cs" />
+    <Compile Include="Cards\Kingdom\Gardens.cs" />
+    <Compile Include="Cards\Treasures\Copper.cs" />
+    <Compile Include="Cards\Treasures\Gold.cs" />
+    <Compile Include="Cards\Treasures\Silver.cs" />
+    <Compile Include="Cards\Victory\Province.cs" />
+    <Compile Include="Cards\Victory\Duchy.cs" />
+    <Compile Include="Cards\Victory\Estate.cs" />
+    <Compile Include="Data\CommonCardData.cs" />
+    <Compile Include="Interfaces\IAction.cs" />
+    <Compile Include="Interfaces\IAttack.cs" />
+    <Compile Include="Interfaces\ICurseCard.cs" />
+    <Compile Include="Interfaces\IKingdomCard.cs" />
+    <Compile Include="Interfaces\IReaction.cs" />
+    <Compile Include="Interfaces\ITreasureCard.cs" />
+    <Compile Include="Interfaces\IVictoryCard.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Data\DeckData.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Data\BoardData.cs" />
+    <Compile Include="Data\PlayerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\StockpileData.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -57,5 +99,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
